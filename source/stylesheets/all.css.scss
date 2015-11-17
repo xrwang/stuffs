@@ -7,20 +7,36 @@
 @import "grid";
 @import "button";
 
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
 
 body {
   font-family: 'Lato', sans-serif;
-  color: $keyboard-grey;
+  color: $warm-dark-grey;
   padding-bottom: 30px;
-}
-
-h1 {
   .orng-text{
     color: $bridge-orange;
   }
   .grey-text{
-    color: $keyboard-grey;
+    color: $warm-dark-grey;
   }
+}
+
+h1 {
+
   }
 
 
@@ -110,7 +126,7 @@ h1 {
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 /* Custom page footer */
@@ -140,6 +156,7 @@ h1 {
   max-width: 88%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 1.6em;
   border-radius: 8px;
   background-color: $cold-grey;
   text-align: left;
@@ -149,20 +166,28 @@ h1 {
   color: $bridge-orange;
   text-decoration: underline;
   }
+  img.translator-avatar{
+    max-width: 68px;
+    border-radius: 100px;
+    border: 4px solid white;
+    margin: 0.5em 0.4em;
+  }
 }
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
 }
 
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
+  color: black;
+  font-weight: 600;
   margin-left: $jumbotron-padding;
+  img.meedan-logo {
+    width: 130px;
+    padding-top: 0.75em;
+  }
 }
-.marketing p + h4 {
-  margin-top: 28px;
-}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -175,10 +200,37 @@ h1 {
   }
   /* Space out the masthead */
   .header {
+    // border: 1px solid purple;
     margin-bottom: 30px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron-narrow {
     border-bottom: 0;
+  }
+}
+
+nav{
+  // border: 1px solid pink;
+  .text-muted{
+    // border: 1px solid blue;
+  }
+  img.main-logo{
+    vertical-align: middle;
+    // border: 1px solid red;
+    margin-top: -1px;
+  }
+  h4 {
+    display: inline;
+  }
+  height: 3em;
+  max-width: 95%;
+  // border: 1px solid red;
+  ul{
+    margin-top: 0;
+    list-style-type: none;
+    // border: 1px solid blue;
+  li{
+    display: inline;
+    }
   }
 }

@@ -5,8 +5,7 @@
   color: $keyboard-grey;
   font-size: 18px;
   font-weight: 300;
-  padding: 6px 10px 6px 10px;
-  border: solid $keyboard-grey 2px;
+  border: solid  2px;
   text-decoration: none;
   text-decoration: none;
   -o-transition: color 0.5s linear;
@@ -15,16 +14,48 @@
   -webkit-transition: color 0.5s linear;
   -ms-transition: color 0.5s linear;
   transition: color 0.5s linear;
+  padding: 14px 24px;
+  font-size: 21px;
 }
 
 
-.btn:hover  {
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
+.btn:hover, .btn-red  {
   color: #FF4F00;
-  font-size: 20px;
-  padding: 6px 10px 6px 10px;
-  border: solid #ff5100 2px;
   text-decoration: none;
+}
+
+a.btn-round{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: $keyboard-grey;
+  background-position: center;
+  background-size: 20px 20px;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  margin-left: 10px;
+}
+
+.btn-facebook{
+  background-image: url('/images/facebook-logo.svg'); /* Should work */
+  background-repeat: no-repeat;
+
+}
+
+.btn-twitter{
+  background-image: url('/images/twitter-logo.svg'); /* Should work */
+  background-repeat: no-repeat;
+
+}
+
+.btn-newsletter{
+  background-image: url('/images/newsletter-logo.svg'); /* Should work */
+  background-repeat: no-repeat;
+
 }
