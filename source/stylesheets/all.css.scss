@@ -40,6 +40,7 @@ h1 {
 
   h1,
   .h1 {
+    font-weight:800;
     color: $jumbotron-heading-color;
     padding-bottom: ($jumbotron-padding * 2 );
   }
@@ -140,7 +141,7 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   border-radius: 8px;
-  background-color: #eee;
+  background-color: $cold-grey;
   text-align: left;
   border-bottom: 1px solid #e5e5e5;
   h1 {
