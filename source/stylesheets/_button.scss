@@ -1,0 +1,30 @@
+
+
+.btn{
+  border-radius: 4px;
+  color: $keyboard-grey;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 6px 10px 6px 10px;
+  border: solid $keyboard-grey 2px;
+  text-decoration: none;
+  text-decoration: none;
+  -o-transition: color 0.5s linear;
+  -moz-transition: color 0.5s linear;
+  -khtml-transition: color 0.5s linear;
+  -webkit-transition: color 0.5s linear;
+  -ms-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+
+.btn:hover  {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  color: #FF4F00;
+  font-size: 20px;
+  padding: 6px 10px 6px 10px;
+  border: solid #ff5100 2px;
+  text-decoration: none;
+}

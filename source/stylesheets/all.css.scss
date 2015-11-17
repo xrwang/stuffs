@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+@import "variables";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/clearfix";
+@import "grid";
+@import "button";
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $keyboard-grey;
+  padding-bottom: 30px;
+}
+
+h1 {
+  .orng-text{
+    color: $bridge-orange;
+  }
+  .grey-text{
+    color: $keyboard-grey;
+  }
+  }
+
+
+
+
+//
+// Jumbotron
+// --------------------------------------------------
+
+
+.jumbotron {
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+
+  h1,
+  .h1 {
+    color: $jumbotron-heading-color;
+    padding-bottom: ($jumbotron-padding * 2 );
+  }
+
+  p {
+    margin-bottom: ($jumbotron-padding / 2);
+    font-size: $jumbotron-font-size;
+    font-weight: 200;
+  }
+
+  > hr {
+    border-top-color: darken($jumbotron-bg, 10%);
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top:    ($jumbotron-padding * 1.6);
+    padding-bottom: ($jumbotron-padding * 1.6);
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: $jumbotron-heading-font-size;
+    }
+  }
+}
+
+
+
+
+
+
+
+////////
+//Here is where the project section lives////
+//it's called "jumbotron narrow"//
+///////
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  margin-left: ($jumbotron-padding * 2) - 15px;
+  padding-top: $jumbotron-padding;
+  // border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron-narrow {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 30px;
+  padding-left: 30px;
+  align: center;
+  max-width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  background-color: #eee;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  h1 {
+  font-size: 3em;
+  color: $bridge-orange;
+  text-decoration: underline;
+  }
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  margin-left: $jumbotron-padding;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron-narrow {
+    border-bottom: 0;
+  }
+}
