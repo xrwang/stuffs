@@ -5,141 +5,192 @@ layout: "default"
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<div class= "conatiner">
+
+
+
+<!-- Here is the script for expanding and collapsing -->
+<script type="text/javascript">
+
+$(document).ready( function(){
+    $('.btn-newsletter').click( function(event){
+        event.stopPropagation();
+        $('.newsletter-menu').toggle();
+    });
+
+    $('body').click(function(event) {
+    if (!$(event.target).closest('.newsletter-menu').length) {
+        $('.newsletter-menu').hide();
+    };
+    });
+
+});
+
+</script>
+
+<div class= "container-top">
   <div class="header clearfix">
     <nav>
-      <img class="main-logo" src="images/bridge-logo.svg">
+      <img class="main-logo" alt="bridge-logo" src="images/bridge-logo.svg">
       <h4 class="text-muted">
         <span class="orng-text">Bridge</span> Social Translation for Social Media.
       </h4>
 
       <ul class="nav nav-pills pull-right">
         <li><a class = "btn-round btn-facebook" href="http://facebook.com/speakbridge" target="_blank"></a></li>
-        <li><a class = "btn-round btn-twitter" href="http://facebook.com/speakbridge" target="_blank"></a></li>
-        <li><a class = "btn-round btn-newsletter" href="http://facebook.com/speakbridge" target="_blank"></a></li>
-        <div class="newsletter-menu">
+        <li><a class = "btn-round btn-twitter" href="http://twitter.com/speakbridge" target="_blank"></a></li>
+        <li><a class = "btn-round btn-newsletter" href="#"></a></li>
+        <li><a class = "btn-round btn-up" href="#"></a></li>
       </ul>
-    </nav>
-  </div>
+
+
+          <div class="newsletter-menu">
+              <form class="mailchimp validate" action="//meedan.us11.list-manage.com/subscribe/post?u=539fbe59ddc773c6592797bf2&amp;id=16c3bf2018" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+              Signup for our Newsletter!
+              <div class="form-group">
+                <label for="mce-EMAIL">
+                  Email Address
+                </label>
+                <input type="email" value="" name="EMAIL" class="required email" placeholder="example@example.com" id="mce-EMAIL">
+                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+
+                 <!-- Anti-spam honeypot technique -->
+                <div style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_539fbe59ddc773c6592797bf2_16c3bf2018" tabindex="-1" value="">
+                </div>
+
+              <!-- Checkbox -->
+                <div class="apply-to-translate">
+                <input type="checkbox" value="1" name="group[7069][1]" id="mce-group[7069]-7069-0">
+                <label for="mce-group[7069]-7069-0">
+                  I'd like to apply to be a Bridge translator.
+                </label>
+                </div>
+                </form>
+            </div>
+        </nav>
+      </div>
 </div>
 
 
-<div class="jumbotron">
+<div class="jumbotron custom-jumbo">
   <div class="container">
+
     <h1><span class="orng-text">Bridge</span><span class="grey-text"> projects</span></h1>
 
-    <span class="row">
-      <p><a class="btn" href="#" role="button">Learn more</a></p>
-    </span>
+    <div class="buttons">
 
-    <span class="row">
-      <p><a class="btn" href="#" role="button">Start Translating</a></p>
-    </span>
-    <span class="row">
-    <p><a class="btn btn-red" href="#" role="button">See our projects &raquo;</a></p>
-    </span>
+      <div class="row learn">
+        <a class="btn" href="http://meedan.com/en/bridge" target="_blank" role="button">Learn more</a>
+      </div>
+
+      <div class="row start">
+        <a class="btn" href="https://docs.google.com/forms/d/18lczlMnluTqfVj8i5VaE4470iuruXymDxCTMcyirnao/viewform?edit_requested=true" target="_blank" role="button">Start Translating</a>
+      </div>
+
+      <div class="row see">
+        <a class="btn btn-red" href="#ooew" role="button">See our projects &raquo;</a>
+      </div>
+
+    </div>
   </div>
 </div>
 
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-   </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div>
-  </div>
-</div> -->
+
 
 <!-- Project ONE -->
 
       <div class="jumbotron-narrow">
-        <h1>#outofedenwalk</h1>
-        <p class="lead">This is placeholder text descring the Bridge project about something that contains some things and some other things. You probably should read this second line of text to understand it, and just to make sure you do I’m writing this extra line.</p>
+        <h1 id="ooew">#outofedenwalk</h1>
+        <h3>with National Geographic</h3>
+        <p class="lead">Out of Eden Walk is a 21,000 mile journey led by Pulitzer Prize-winning journalist Paul Salopek as he traces a historic path of human migration.  Every 100 miles, he posts a Milestone with an update about the immediate surroundings. These translations come from social media posts gathered near the location and around the time each Milestone is recorded.</p>
 
-        <div class="row">
-          <img class="translator-avatar" src="images/sarah.png">
-          <img class="translator-avatar" src="images/anxiao.png">
-          <img class="translator-avatar" src="images/boanerges.png">
-          <img class="translator-avatar" src="images/caiosba.png">
-          <img class="translator-avatar" src="images/clarissa.png">
-          <img class="translator-avatar" src="images/mvlindsey.png">
-          <img class="translator-avatar" src="images/nora.png">
-          <img class="translator-avatar" src="images/tom.png">
+        <p>This feature is produced in collaboration with Meedan, the DOLLY Project, and Translators Without Borders.</p>
+
+        <div class="row avatar-row">
+          <img class="translator-avatar" alt="aleksandrejashia" src="images/aleksandrejashia.png">
+          <img class="translator-avatar" alt="nildelahaye" src="images/nildelahaye.png">
+
         </div>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Check it out</a></p>
+        <a class="btn btn-lg btn-success" href="#" role="button">Check it out</a>
       </div>
 
 
-<!-- Project TWO -->
+<!-- Project TWO: SUEZ -->
 
       <div class="jumbotron-narrow">
-        <h1>#outofedenwalk</h1>
-        <p class="lead">This is placeholder text descring the Bridge project about something that contains some things and some other things. You probably should read this second line of text to understand it, and just to make sure you do I’m writing this extra line.</p>
+        <h1>Suez Canal</h1>
+        <p class="lead">With the opening of the New Suez Canal in Egypt, citizens have responded with satirical hashtags and commentary on the events</p>
 
-        <div class="row">
-          <img class="translator-avatar" src="images/sarah.png">
-          <img class="translator-avatar" src="images/anxiao.png">
-          <img class="translator-avatar" src="images/boanerges.png">
-          <img class="translator-avatar" src="images/caiosba.png">
-          <img class="translator-avatar" src="images/clarissa.png">
-          <img class="translator-avatar" src="images/mvlindsey.png">
-          <img class="translator-avatar" src="images/nora.png">
-          <img class="translator-avatar" src="images/tom.png">
+        <div class="row avatar-row">
+          <img class="translator-avatar" alt="sarah" src="images/sarah.png">
+
+          <img class="translator-avatar" alt="caio" src="images/caiosba.png">
+
+          <img class="translator-avatar" alt="nora" src="images/nora.png">
+          <img class="translator-avatar" alt="tom" src="images/tom.png">
         </div>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Check it out</a></p>
+        <a class="btn btn-lg btn-success" href="#" role="button">Check it out</a>
       </div>
 
 
 <!-- PROJECT THREE -->
-      <div class="jumbotron-narrow">
-        <h1>#outofedenwalk</h1>
-        <p class="lead">This is placeholder text descring the Bridge project about something that contains some things and some other things. You probably should read this second line of text to understand it, and just to make sure you do I’m writing this extra line.</p>
 
-        <div class="row">
-          <img class="translator-avatar" src="images/sarah.png">
-          <img class="translator-avatar" src="images/anxiao.png">
-          <img class="translator-avatar" src="images/boanerges.png">
-          <img class="translator-avatar" src="images/caiosba.png">
-          <img class="translator-avatar" src="images/clarissa.png">
-          <img class="translator-avatar" src="images/mvlindsey.png">
-          <img class="translator-avatar" src="images/nora.png">
-          <img class="translator-avatar" src="images/tom.png">
-        </div>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Check it out</a></p>
+  <div class="jumbotron-narrow">
+    <h1>Gatos Politicos</h1>
+    <p class="lead">A selection of Spanish-speaking political cats for your reading pleasure. =^.^=</p>
+
+    <div class="row avatar-row">
+      <img class="translator-avatar" alt="anxiao" src="images/anxiao.png">
+      <img class="translator-avatar" alt="caio" src="images/caiosba.png">
+      <img class="translator-avatar" alt="marley" src="images/mvlindsey.png">
+      <img class="translator-avatar" alt="dorothy" src="images/dsantos.png">
+    </div>
+    <a class="btn btn-lg btn-success" href="https://speakbridge.io/medias/embed/gatos-politicos/" target="_blank" role="button">Check it out</a>
+  </div>
+
+
+  <!-- Project TWO -->
+
+    <div class="jumbotron-narrow">
+      <h1>You Stink &#40;Lebanon&#41;</h1>
+      <p class="lead">Online conversations and actions related to protests in Lebanon sparked by the government's failure to clean up waste on the streets.</p>
+
+      <div class="row avatar-row">
+        <h4>Translators:</h4>
+        <img class="translator-avatar" alt="sarah" src="images/sarah.png">
+        <img class="translator-avatar" alt="nora" src="images/nora.png">
+        <img class="translator-avatar" alt="tom" src="images/tom.png">
       </div>
+      <a class="btn btn-lg btn-success" href="https://speakbridge.io/medias/embed/you-stink-lebanon/" role="button" target="_blank">Check it out</a>
+    </div>
 
 
-  <!-- FOOTER PORTION     -->
+  <!-- TESTIMONIALS   -->
 
       <div class="row marketing">
         <div class="col-sm-3">
           <p>"With Bridge, Meedan hopes to convey the nuances of language that often get lost in the machine translations that the social networks currently use."</p>
-          <p>-Nieman Lab, Joseph Lichterman</p>
+          <p><em>-Nieman Lab, Joseph Lichterman</em></p>
         </div>
         <div class="col-sm-3">
-          <p>“A totally new way of doing this. It is really, really great."</p>
+          <p>An innovative way to collect, sort and present the torrent of white noise in social media, finding the human strands that hold together the contemporary human conversation every 100 miles across the world</p>
+          <p><em>-National Geographic, Paul Salopek</em><p>
         </div>
-        <div class="col-sm-3">
-          <p>“My favorite way to translate social media.”</p>
+        <!-- <div class="col-sm-3">
+          <p></p>
+        </div> -->
+        <div class="col-sm-3 stacking">
+        <a href="https://itunes.apple.com/us/app/bridge-translate-social-media/id1050310015?mt=8" target="_blank"><img src="images/app-store-badge-135x40.svg" alt="app store logo"></a>
+        <a href="http://meedan.com" target="_blank"><img class="meedan-logo" alt="meedan-logo" src="images/meedan-logo-nav.svg"></a>
         </div>
-        <img src="images/app-store-badge-135x40.svg">
-        <img class="meedan-logo" src="images/meedan-logo-nav.svg">
-
       </div>
 
-
-
-<!-- Here is the script for expanding and collapsing -->
-<script type="text/javascript">
-</script>
+      <footer>
+        <a href="http://meedan.com/en/bridge" target="_blank"><img class="footer-logo" alt="bridge-logo" src="images/bridge-logo.svg"></a>
+        <p class="links">
+        <a class="tos" href="http://meedan.com/en/bridge/bridge_tos.html" target="_blank">Terms of Service</a>
+        &bull;
+        <a class="privpolicy" href="http://meedan.com/en/bridge/bridge_privacy.html" target="_blank">Privacy Policy</a>
+        </p>
+      </footer>

@@ -59,3 +59,21 @@ a.btn-round{
   background-repeat: no-repeat;
 
 }
+
+.btn-up{
+  background-image: url('/images/up.svg'); /* Should work */
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 682px){
+  a.btn-up{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 682px){
+  a.btn-round{
+    display: block;
+    margin-top: 1em;
+  }
+}

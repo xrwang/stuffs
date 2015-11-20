@@ -6,6 +6,7 @@
 @import "mixins/clearfix";
 @import "grid";
 @import "button";
+@import "forms";
 
 // Floats
 // -------------------------
@@ -156,13 +157,14 @@ h1 {
   max-width: 88%;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 1.6em;
+  margin: 1em auto 1em auto;
   border-radius: 8px;
   background-color: $cold-grey;
   text-align: left;
   border-bottom: 1px solid #e5e5e5;
   h1 {
-  font-size: 3em;
+  font-size: 2.5em;
+  padding: 0em 3em 0.25em 0em;
   color: $bridge-orange;
   text-decoration: underline;
   }
@@ -176,15 +178,25 @@ h1 {
 .jumbotron .btn {
 }
 
+
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
   color: black;
   font-weight: 600;
   margin-left: $jumbotron-padding;
-  img.meedan-logo {
-    width: 130px;
-    padding-top: 0.75em;
+  margin-right: $jumbotron-padding;
+  text-align: center;
+  min-height: 1px;
+  .stacking{
+    display: flex;
+    flex-direction: column;
+  }
+  img{
+    padding: 1em 0.1em;
+  }
+  img.meedan-logo{
+    width: 131px;
   }
 }
 
@@ -209,8 +221,12 @@ h1 {
   }
 }
 
+
+
+
 nav{
   // border: 1px solid pink;
+  max-width: 95%;
   .text-muted{
     // border: 1px solid blue;
   }
@@ -223,7 +239,6 @@ nav{
     display: inline;
   }
   height: 3em;
-  max-width: 95%;
   // border: 1px solid red;
   ul{
     margin-top: 0;
@@ -233,4 +248,111 @@ nav{
     display: inline;
     }
   }
+}
+
+.newsletter-menu{
+  position:absolute;
+  display:none; /* Hide it first of all */
+  background:#F8F8F8;
+  border:1px solid #CCC;
+  box-shadow:0 1px 3px rgba(0,0,0,0.15);
+  float: left;
+  padding: 1em;
+  overflow-y: hidden;
+  right: 0;
+  border-radius:3px;
+  label {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+}
+
+.drop{
+  display: inline;
+  // border: 1px solid red;
+}
+
+.custom-jumbo{
+}
+
+
+.avatar-row{
+  padding-bottom: 1.5em;
+  padding-left: 5px;
+  h4{
+    padding-left: 0.75em;
+  }
+}
+
+
+@media screen and (max-width: 682px){
+  .header{
+    max-width: 90%;
+    margin-left: $jumbotron-padding + 20px;
+    padding-left: 0;
+  }
+
+  ul{
+    position: fixed;
+    right: 10px;
+  }
+
+  .jumbotron-narrow{
+    // border: 1px solid red;
+    max-width: 100%;
+  }
+  .marketing{
+    img{
+      // border: 1px solid red;
+      // display: inline-block;
+      // align-content: center;
+    }
+  }
+
+    .newsletter-menu{
+    width: 90%;
+    position:fixed;
+    right: 60;
+    }
+
+
+
+
+}
+
+
+
+footer{
+  img, a{
+    margin: 0 auto;
+  }
+  p.links{
+    text-align: center;
+    padding: 1em 0;
+    font-weight:300;
+  }
+  img.footer-logo{
+    display: block;
+    width: 40px;
+  }
+  a {
+  color: $warm-dark-grey;
+  text-decoration: none;
+  font-weight:400;
+
+  &:hover {
+    color: $accent-blue;
+    transition: 0.4s;
+    }
+  }
+
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.learn, .start, .see{
+  padding: 1.7em 0;
 }
