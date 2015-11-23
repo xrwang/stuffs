@@ -303,8 +303,12 @@ nav{
 }
 
 .custom-jumbo{
-  h1{
+  h1, h3.subtitle{
     margin-left: -$jumbotron-padding/2;
+    padding-bottom: 0;
+  }
+  h3.subtitle{
+    padding-bottom: 1em;
   }
 }
 
@@ -391,5 +395,5 @@ footer{
 }
 
 .learn, .start, .see{
-  padding: 1.7em 0;
+  padding: 1.5em 0;
 }

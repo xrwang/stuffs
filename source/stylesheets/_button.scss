@@ -5,7 +5,7 @@
   color: $keyboard-grey;
   font-size: 18px;
   font-weight: 300;
-  border: solid  2px;
+  border: solid  1px;
   text-decoration: none;
   text-decoration: none;
   -o-transition: color 0.5s linear;
@@ -43,25 +43,29 @@ a.btn-round{
 }
 
 .btn-facebook{
-  background-image: url('/images/facebook-logo.svg'); /* Should work */
+  background-image: url('/images/facebook-logo.svg');
   background-repeat: no-repeat;
 
 }
 
 .btn-twitter{
-  background-image: url('/images/twitter-logo.svg'); /* Should work */
+  background-image: url('/images/twitter-logo.svg');
   background-repeat: no-repeat;
 
 }
 
 .btn-newsletter{
-  background-image: url('/images/newsletter-logo.svg'); /* Should work */
+  background-image: url('/images/newsletter-logo.svg');
   background-repeat: no-repeat;
-
 }
 
 .btn-up{
-  background-image: url('/images/up.svg'); /* Should work */
+  background-image: url('/images/up.svg');
+  background-repeat: no-repeat;
+}
+
+.btn-info{
+  background-image: url('/images/info.svg');
   background-repeat: no-repeat;
 }
 
